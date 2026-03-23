@@ -555,8 +555,9 @@ details {
 .gallery-feature {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(320px, 430px) minmax(0, 1fr);
   align-items: center;
+  justify-content: center;
 }
 
 .gallery-card {
@@ -581,11 +582,23 @@ details {
 }
 
 .video-frame {
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 46%),
+    #061016;
   cursor: default;
 }
 
 .video-frame video {
-  aspect-ratio: 16 / 9;
+  width: min(100%, 390px);
+  max-height: 760px;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  background: #050b10;
 }
 
 .gallery-copy {
