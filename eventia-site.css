@@ -253,6 +253,7 @@ main {
 .section-tag,
 .section-heading,
 .hero-copy,
+.hero-logo,
 .hero-visual,
 .gallery-copy,
 .contact-copy,
@@ -317,6 +318,18 @@ details p {
   margin: 0 auto;
   display: grid;
   justify-items: center;
+}
+
+.hero-logo {
+  width: 100%;
+  margin: 0 auto 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo img {
+  width: min(520px, 100%);
+  filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.34));
 }
 
 .hero-cluster {
@@ -436,20 +449,6 @@ details {
   width: min(100%, 980px);
   margin: 0 auto;
   align-content: start;
-}
-
-.logo-stage {
-  padding: 22px;
-  border-radius: calc(var(--radius-xl) - 4px);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1), transparent 46%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-}
-
-.logo-stage img {
-  width: min(500px, 100%);
-  margin: 0 auto;
-  filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.34));
 }
 
 .hero-panel-grid {
