@@ -273,6 +273,13 @@ main {
   margin-bottom: 20px;
 }
 
+@supports (content-visibility: auto) {
+  .section.panel {
+    content-visibility: auto;
+    contain-intrinsic-size: 960px;
+  }
+}
+
 .panel,
 .hero {
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1236,6 +1243,22 @@ body.menu-open {
 }
 
 @media (max-width: 860px) {
+  body {
+    animation: none;
+    background-size: 100% 100%;
+  }
+
+  body::before {
+    inset: -14%;
+    opacity: 0.18;
+    filter: blur(44px) saturate(112%);
+    animation: none;
+  }
+
+  body::after {
+    display: none;
+  }
+
   .menu-toggle {
     display: inline-block;
   }
@@ -1268,6 +1291,28 @@ body.menu-open {
     position: relative;
   }
 
+  .nav-shell,
+  .site-nav,
+  .panel,
+  .hero,
+  .hero-panel,
+  .service-card,
+  .style-card,
+  .gallery-card,
+  .process-card,
+  .contact-card,
+  details {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav-shell,
+  .site-nav,
+  .panel,
+  .hero {
+    background-color: rgba(7, 22, 30, 0.92);
+  }
+
   .site-nav a {
     justify-content: center;
   }
@@ -1285,13 +1330,19 @@ body.menu-open {
     grid-template-columns: 1fr;
   }
 
+  .balloon-art-b,
+  .balloon-art-d,
+  .balloon-art-f {
+    display: none;
+  }
+
   .balloon-art {
-    opacity: 0.1;
+    opacity: 0.08;
   }
 
   .balloon-ribbon {
     height: clamp(54px, 10vw, 92px);
-    opacity: 0.46;
+    opacity: 0.32;
   }
 }
 
@@ -1332,6 +1383,12 @@ body.menu-open {
     left: 12px;
     right: 12px;
     bottom: 12px;
+  }
+
+  .balloon-art-a,
+  .balloon-art-c,
+  .balloon-art-e {
+    display: none;
   }
 }
 
