@@ -6,7 +6,7 @@ const buildWhatsAppLink = (message) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
 const defaultWhatsAppMessage =
-  `Hola, vi la pagina de ${BUSINESS_NAME} y quiero cotizar decoracion para mi evento. Quiero conocer opciones, disponibilidad y forma de apartado.`;
+  `Hola, vi la p\u00e1gina de ${BUSINESS_NAME} y quiero cotizar decoraci\u00f3n para mi evento. Quiero conocer opciones, disponibilidad y forma de apartado.`;
 
 const phoneTargets = document.querySelectorAll("[data-phone-text]");
 const whatsappTargets = document.querySelectorAll("[data-whatsapp-link]");
@@ -205,11 +205,11 @@ if (form) {
     const fechaEvento =
       document.getElementById("fechaEvento")?.value.trim() || "Sin fecha definida";
     const ubicacion =
-      document.getElementById("ubicacion")?.value.trim() || "Sin ubicacion";
+      document.getElementById("ubicacion")?.value.trim() || "Sin ubicaci\u00f3n";
     const telefono =
-      document.getElementById("telefono")?.value.trim() || "Sin telefono";
+      document.getElementById("telefono")?.value.trim() || "Sin tel\u00e9fono";
     const descripcion =
-      document.getElementById("descripcion")?.value.trim() || "Sin descripcion";
+      document.getElementById("descripcion")?.value.trim() || "Sin descripci\u00f3n";
 
     const message =
       `Hola, quiero cotizar con ${BUSINESS_NAME}.\n\n` +
@@ -217,9 +217,9 @@ if (form) {
       `Tipo de evento: ${tipoEvento}\n` +
       `Servicio: ${servicio}\n` +
       `Fecha del evento: ${fechaEvento}\n` +
-      `Ubicacion: ${ubicacion}\n` +
-      `Telefono: ${telefono}\n` +
-      `Idea o descripcion: ${descripcion}\n\n` +
+      `Ubicaci\u00f3n: ${ubicacion}\n` +
+      `Tel\u00e9fono: ${telefono}\n` +
+      `Idea o descripci\u00f3n: ${descripcion}\n\n` +
       `Quiero conocer disponibilidad, costo y forma de apartado.`;
 
     window.open(buildWhatsAppLink(message), "_blank", "noopener");
